@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ljw-5z-Zcz">
-                                <rect key="frame" x="25" y="251" width="364" height="91.5"/>
+                                <rect key="frame" x="25" y="254" width="364" height="91.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edu-vO-XsQ">
                                         <rect key="frame" x="0.0" y="0.0" width="54" height="20.5"/>
@@ -40,13 +40,14 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVh-up-Nty">
-                                <rect key="frame" x="25" y="44" width="364" height="182"/>
+                                <rect key="frame" x="107" y="44" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="eVh-up-Nty" secondAttribute="height" multiplier="1:0.5" id="UEh-ss-Hx8"/>
+                                    <constraint firstAttribute="height" constant="200" id="0Gs-LF-ImF"/>
+                                    <constraint firstAttribute="width" secondItem="eVh-up-Nty" secondAttribute="height" multiplier="1:1" id="M6y-Dv-IgC"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Brief Description about yourself" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YmN-Jc-UNa">
-                                <rect key="frame" x="20" y="352.5" width="374" height="508.5"/>
+                                <rect key="frame" x="20" y="355.5" width="374" height="505.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -57,17 +58,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="YmN-Jc-UNa" secondAttribute="bottom" constant="35" id="3P5-fC-7ph"/>
-                            <constraint firstItem="ljw-5z-Zcz" firstAttribute="top" secondItem="eVh-up-Nty" secondAttribute="bottom" constant="25" id="E3F-Jh-qAq"/>
+                            <constraint firstItem="eVh-up-Nty" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CIm-BB-vXj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YmN-Jc-UNa" secondAttribute="trailing" constant="20" id="OUb-zS-MFM"/>
-                            <constraint firstItem="eVh-up-Nty" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="OgX-hP-1m2"/>
                             <constraint firstItem="YmN-Jc-UNa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bci-V6-GhK"/>
+                            <constraint firstItem="eVh-up-Nty" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c62-ls-5Xz"/>
                             <constraint firstItem="YmN-Jc-UNa" firstAttribute="top" secondItem="ljw-5z-Zcz" secondAttribute="bottom" constant="10" id="cc9-ES-Ji3"/>
-                            <constraint firstItem="eVh-up-Nty" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="clY-AO-1x8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVh-up-Nty" secondAttribute="trailing" constant="25" id="l13-b7-Qtd"/>
+                            <constraint firstItem="ljw-5z-Zcz" firstAttribute="top" secondItem="eVh-up-Nty" secondAttribute="bottom" constant="10" id="xez-wX-gQs"/>
                             <constraint firstItem="ljw-5z-Zcz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="yZ0-wW-1EN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ljw-5z-Zcz" secondAttribute="trailing" constant="25" id="zni-hi-Dtt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="os8-0P-8nG" id="ur6-9A-4qW"/>
+                        <outlet property="descTextField" destination="YmN-Jc-UNa" id="esZ-rf-Yyf"/>
+                        <outlet property="nameLabel" destination="edu-vO-XsQ" id="jPR-IG-Lsb"/>
+                        <outlet property="occupationLabel" destination="lsk-4y-Ujt" id="mgD-B3-eLR"/>
+                        <outlet property="profileImageView" destination="eVh-up-Nty" id="K9b-d6-4Gp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
