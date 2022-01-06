@@ -17,31 +17,30 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        updateUI()
+        // EXPLAIN WHAT AN IMAGE LITERAL IS AND HOW TO GET IT
+        // hint: #imageLiteral(
+        let person = Person(name: "Trevor",
+                            yob: 2001,
+                            occupation: "iOS Developer",
+                            description: "I code stuff",
+                            profilePicture: #imageLiteral(resourceName: "karl"))
+        updateUI(with: person)
     }
     
-    func updateUI() {
-        nameLabel.text = "Name: Trevor"
-        occupationLabel.text = "iOS Developer"
-        descTextField.text = "I code stuff"
-        descTextField.isUserInteractionEnabled = false
-        ageLabel.text = "Age: \(age(yearBorn: 2001))"
-        profileImageView.image = UIImage(named: "karl")!
+    func updateUI(with person: Person) {
+        nameLabel.text = "Name: \(person.name)"
+        occupationLabel.text = person.occupation
+        descTextField.text = person.description
+        ageLabel.text = "Age: \(person.age)"
+        profileImageView.image = person.profilePicture
         
         // <----- If you run need to fill more time ----->
+        descTextField.isUserInteractionEnabled = false
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         profileImageView.clipsToBounds = true
         profileImageView.layer.borderColor = UIColor.cyan.cgColor
         profileImageView.layer.borderWidth = 4
         profileImageView.contentMode = .scaleAspectFill
-    }
-
-    func age(yearBorn year: Int) -> Int {
-        let calendar = Calendar.current
-        let now = calendar.dateComponents([.year], from: Date())
-        // Be sure to explain that we will be covering what that explanation point is later.
-        return now.year! - year
     }
 }
 
