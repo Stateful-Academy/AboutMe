@@ -12,22 +12,22 @@ class Person {
     let occupation      : String
     let description     : String
     let profilePicture  : UIImage
-    private let yob     : Int
+    private let birthYear     : Int
     
     var age: Int {
         get {
             let calendar = Calendar.current
             let now = calendar.dateComponents([.year], from: Date())
             // Be sure to explain that we will be covering what that explanation point is later.
-            return now.year! - yob
+            return now.year! - birthYear
         }
     }
     
-    init(name: String, yob: Int, occupation: String, description: String, profilePicture: UIImage) {
+    init(name: String, birthYear: Int, occupation: String, description: String, profilePicture: UIImage) {
         self.name           = name
         self.occupation     = occupation
         self.description    = description
         self.profilePicture = profilePicture
-        self.yob = yob
+        self.birthYear = yob
     }
 }

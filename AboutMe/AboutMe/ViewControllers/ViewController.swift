@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // EXPLAIN WHAT AN IMAGE LITERAL IS AND HOW TO GET IT
         // hint: #imageLiteral(
         let person = Person(name: "Trevor",
-                            yob: 2001,
+                            birthYear: 2001,
                             occupation: "iOS Developer",
                             description: "I code stuff",
                             profilePicture: #imageLiteral(resourceName: "karl"))
