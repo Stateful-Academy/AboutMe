@@ -17,10 +17,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // EXPLAIN WHAT AN IMAGE LITERAL IS AND HOW TO GET IT
-        // hint: #imageLiteral(
         let person = Person(name: "Trevor",
-                            birthYear: 2001,
+                            birthDay: "2001/03/16",
                             occupation: "iOS Developer",
                             description: "I code stuff",
                             profilePicture: #imageLiteral(resourceName: "karl"))
@@ -31,7 +29,9 @@ class ViewController: UIViewController {
         nameLabel.text = "Name: \(person.name)"
         occupationLabel.text = person.occupation
         descTextField.text = person.description
-        ageLabel.text = "Age: \(person.age)"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        ageLabel.text = "Age: \(myAge(birthday: formatter.date(from: person.birthDay)!))"
         profileImageView.image = person.profilePicture
         
         // <----- If you run need to fill more time ----->
@@ -41,6 +41,11 @@ class ViewController: UIViewController {
         profileImageView.layer.borderColor = UIColor.cyan.cgColor
         profileImageView.layer.borderWidth = 4
         profileImageView.contentMode = .scaleAspectFill
+    }
+    
+    func myAge(birthday: Date) -> Int {
+        let age = Calendar.current.dateComponents([.year], from: birthday, to: Date())
+        return age.year ?? 0
     }
 }
 
