@@ -14,27 +14,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var occupationLabel: UILabel!
     @IBOutlet weak var descTextField: UITextView!
+    @IBOutlet weak var currentPlaceLabel: UILabel!
+    
+    var index: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let person = Person(name: "Trevor",
-                            birthDay: "2001/03/16",
-                            occupation: "iOS Developer",
-                            description: "I code stuff",
-                            profilePicture: #imageLiteral(resourceName: "karl"))
-        updateUI(with: person)
+//        profileImageView.contentMode = .scaleAspectFit
+        updateUI()
     }
     
-    func updateUI(with person: Person) {
+    @IBAction func backButtonPressed(_ sender: Any) {
+        if index > 0 {
+            index -= 1
+            updateUI()
+        }
+    }
+    @IBAction func forwardButtonPressed(_ sender: Any) {
+        if index < Data.people.count - 1 {
+            index += 1
+            updateUI()
+        }
+    }
+    func updateUI() {
+        let person = Data.people[index]
         nameLabel.text = "Name: \(person.name)"
         occupationLabel.text = person.occupation
         descTextField.text = person.description
+        profileImageView.image = person.profilePicture
+        currentPlaceLabel.text = "(\(index + 1) / \(Data.people.count))"
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         ageLabel.text = "Age: \(myAge(birthday: formatter.date(from: person.birthDay)!))"
-        profileImageView.image = person.profilePicture
         
-        // <----- If you run need to fill more time ----->
+        // <----- Stretch Goals ----->
         descTextField.isUserInteractionEnabled = false
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         profileImageView.clipsToBounds = true

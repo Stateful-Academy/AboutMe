@@ -46,23 +46,53 @@
                                     <constraint firstAttribute="width" secondItem="eVh-up-Nty" secondAttribute="height" multiplier="1:1" id="M6y-Dv-IgC"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Brief Description about yourself" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YmN-Jc-UNa">
-                                <rect key="frame" x="20" y="355.5" width="374" height="505.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="(Brief Description about yourself)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YmN-Jc-UNa">
+                                <rect key="frame" x="20" y="355.5" width="374" height="435.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0rZ-UT-Rz7">
+                                <rect key="frame" x="20" y="811" width="374" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ks3-2z-tDe">
+                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="&lt;---"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jDD-DC-EnC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1 / 9)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtZ-y7-kaF">
+                                        <rect key="frame" x="124.5" y="0.0" width="125" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vW-Ap-ftx">
+                                        <rect key="frame" x="249.5" y="0.0" width="124.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="---&gt;"/>
+                                        <connections>
+                                            <action selector="forwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dt8-kX-2Zi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="YmN-Jc-UNa" secondAttribute="bottom" constant="35" id="3P5-fC-7ph"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0rZ-UT-Rz7" secondAttribute="trailing" constant="20" id="6OF-8F-AKJ"/>
                             <constraint firstItem="eVh-up-Nty" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CIm-BB-vXj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YmN-Jc-UNa" secondAttribute="trailing" constant="20" id="OUb-zS-MFM"/>
+                            <constraint firstItem="0rZ-UT-Rz7" firstAttribute="top" secondItem="YmN-Jc-UNa" secondAttribute="bottom" constant="20" id="YtE-Ot-01N"/>
                             <constraint firstItem="YmN-Jc-UNa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bci-V6-GhK"/>
                             <constraint firstItem="eVh-up-Nty" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c62-ls-5Xz"/>
                             <constraint firstItem="YmN-Jc-UNa" firstAttribute="top" secondItem="ljw-5z-Zcz" secondAttribute="bottom" constant="10" id="cc9-ES-Ji3"/>
+                            <constraint firstItem="0rZ-UT-Rz7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g9n-Wn-v44"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0rZ-UT-Rz7" secondAttribute="bottom" constant="20" id="mxZ-7b-HRY"/>
                             <constraint firstItem="ljw-5z-Zcz" firstAttribute="top" secondItem="eVh-up-Nty" secondAttribute="bottom" constant="10" id="xez-wX-gQs"/>
                             <constraint firstItem="ljw-5z-Zcz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="yZ0-wW-1EN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ljw-5z-Zcz" secondAttribute="trailing" constant="25" id="zni-hi-Dtt"/>
@@ -70,6 +100,7 @@
                     </view>
                     <connections>
                         <outlet property="ageLabel" destination="os8-0P-8nG" id="ur6-9A-4qW"/>
+                        <outlet property="currentPlaceLabel" destination="AtZ-y7-kaF" id="Sgl-Sh-LLn"/>
                         <outlet property="descTextField" destination="YmN-Jc-UNa" id="esZ-rf-Yyf"/>
                         <outlet property="nameLabel" destination="edu-vO-XsQ" id="jPR-IG-Lsb"/>
                         <outlet property="occupationLabel" destination="lsk-4y-Ujt" id="mgD-B3-eLR"/>
