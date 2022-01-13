@@ -13,6 +13,9 @@ Functions
 Control Flow
 IBActions && IBOutlets
 
+## Completed project
+![About_Me](AboutMe.gif)
+
 ## Design the Storyboard
 
 Too create our storyboard will need to flex our skills with Interface builder, constraints, and adding attributes. View the video of the completed project to get an idea of what the storyboard will look like. Okay, let’s get started!
