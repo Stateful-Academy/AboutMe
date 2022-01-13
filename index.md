@@ -43,14 +43,14 @@ Now let’s add the `UILabel`s that will display the text of our application.
 	* Set the spacing to 15
 * Lock in your `Stack View` with the following constraints
 	* Align `Leading` and `Trailing` to 25 points to the `Safe Area`
-	* Align the `Top`space to 10 points to the `Safe Area`
+	* Align the `Top`space to 10 points to the `bottom` of the `UIImageView`
 
 Now we need to add a `UITextView` to display the largest of our text.
 
 * Drag a `Text View` view element from the `Object Library` and drop it onto the canvas under the `Stack View` which holds our `Label`s
 * Set the following constraints
 	* Align `Leading` and `Trailing` to 20 points to the `Safe Area`
-	* Align the `Top`space to 10 points to the `Safe Area`
+	* Align the `Top`space to 10 points to the `bottom` of the `Stack View`
 GGEZ, right?
 
 Now all we have left to do is create our Back Button, Forward Button, and a label to display what user we are on.
@@ -69,7 +69,8 @@ Now all we have left to do is create our Back Button, Forward Button, and a labe
 * Give the label a default title that represents what it will eventually display
 	* (1/9)
 * The `Stack View` should have the following constraints which should lock all your objects into their beautiful and final positions
-	* Align the Trailing, Leading, Top, and Bottom to 20 points to the `Safe Area`
+	* Align the Trailing, Leading and Bottom to 20 points to the `Safe Area`
+	* Align the top to 10 points to the `bottom` of the `textView`
 	
 Great work! Now feels like a great time to create all the IBActions and IBOutlets you will need. Go ahead and rock that out.
 
