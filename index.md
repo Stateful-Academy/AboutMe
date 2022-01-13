@@ -75,7 +75,7 @@ Great work! Now feels like a great time to create all the IBActions and IBOutlet
 
 ---
 ## Model
- In this section we will create a person model with the properties we wish to display. To do this, we need to first create a new `.Swfit` file for us to use. File -> New -> File -> Swift File. Please give this file the name `Person`
+ In this section we will create a person model with the properties we wish to display. To do this, we need to first create a new `.Swift` file for us to use. File -> New -> File -> Swift File. Please give this file the name `Person`
 
 On this new file define a `class` with the following properties and a `member-wise initializer`. Be sure to use the appropriate `Data Types` for each `property`
 * name          
@@ -85,7 +85,7 @@ On this new file define a `class` with the following properties and a `member-wi
 * profilePicture
 
 ## Data File
-To make things easer on us in the long run we will create a `Data` file that will hold our `collection` of `Person` objects. We will then reference back to this `collection` in our `View Controller` to display the correct information. To do this, we need to first create a new `.Swfit` file for us to use. File -> New -> File -> Swift File. Please give this file the name `Data`. 
+To make things easer on us in the long run we will create a `Data` file that will hold our `collection` of `Person` objects. We will then reference back to this `collection` in our `View Controller` to display the correct information. To do this, we need to first create a new `.Swiftt` file for us to use. File -> New -> File -> Swift File. Please give this file the name `Data`. 
 
 On our new `Data.Swift` file, please define a `struct` with the name `Data`. The next section of instruction will be written with the scope of the `Data` struct.
 
