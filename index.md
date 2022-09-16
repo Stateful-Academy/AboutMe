@@ -159,7 +159,7 @@ To display the `age` beautifully we will need a few things. We will need a helpe
 Let’s start with the helper function to mathematically determine the `age` of a person.
 
 1. Define a new function with the name `myAge` with one parameter; `birthday` which will be of type `Date`. This function should return to us an `Int`
-2. Create a new constant named `age` and assign it to the result of the `dateComponents( [.year], from start: , to end: )` method.
+2. Create a new constant named `age` and assign it to the result of the `Calendar.current.dateComponents( [.year], from start: , to end: )` method.
     - `from:`  should be the `birthday` that was passed into the `myAge` function
     - `to:`  should be a `Date` initialized to the current date and time
 
