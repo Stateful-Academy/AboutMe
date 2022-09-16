@@ -169,7 +169,7 @@ Now navigate back to the `updateUI` method. The remaining instructions will be w
 
 We are so close to being able to display the age. All we have left to do is use a `DateFormatter` to take our `date` and display it as a `String`. To accomplish this we will need to...
 
-1. Define a new constant named `formatter` and align it to an initialized `DateFormatter` class
+1. Define a new constant named `formatter` and assign it to an initialized `DateFormatter` class
 2. Using dot notation access the `dateFormat` property of the `formatter` and assign the value of `”yyyy/MM/dd”`
     - Note the capitalization - its important
 3. Set the `text` property of your `ageLabel` to the a `string literal` that reads `”Age: \\(myAge(birthday: formatter.date(from: person.birthDay)!))”`
