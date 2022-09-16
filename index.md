@@ -173,8 +173,8 @@ We are so close to being able to display the age. All we have left to do is use 
 2. Using dot notation access the `dateFormat` property of the `formatter` and assign the value of `”yyyy/MM/dd”`
     - Note the capitalization - its important
 3. Set the `text` property of your `ageLabel` to the a `string literal` that reads `”Age: \\(myAge(birthday: formatter.date(from: person.birthDay)!))”`
-4. Call your `updateUI` function in the `viewDidLoad`
-5. Set the `content mode` of your `ImageVIew` to `.scaleAspectFit`
+4. Assign the `content mode` of your `ImageVIew` to `.scaleAspectFit`
+5. Call your `updateUI` function in the `viewDidLoad`
 
 ### Build and run your project! Let’s see how it works.
 
