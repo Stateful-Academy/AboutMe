@@ -92,7 +92,7 @@ In this section, we will create a person model with the properties we wish to di
 On this new file define a `class` with the following properties and a `member-wise initializer`. Be sure to use the appropriate `Data Types` for each `property`
 
 - name
-- age
+- birthday (String) // YYYY/MM/DD
 - occupation
 - description
 - profilePicture
